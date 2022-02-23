@@ -1,0 +1,20 @@
+.card{
+    background-color: teal;
+    
+}
+.card-title{
+    text-align: right;
+}
+button{
+    margin-left: 500px;
+    color: white;
+    background-color: teal;
+}
+ul{
+    float: left;
+    margin-left: 40px;
+}
+.footer{
+    float: left;
+    margin-left: 300px;
+}

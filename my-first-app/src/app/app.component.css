@@ -1,0 +1,26 @@
+h1{
+    text-align: center;
+    color: blue;
+    background-color:palevioletred;
+    font-family: sans-serif;
+}
+.top{
+    font-family: sans-serif;
+    color: blue;
+    text-align: center;
+    background-color: palevioletred;
+    height: 50px;
+    padding-top: 10px;
+}
+.cnt{
+    background-color: palevioletred;
+    text-align: center;
+    margin-right: 1200px;
+}
+.image{
+    padding-left: 400px;
+    background-color: palevioletred;
+    border:  2px solid black;
+    margin-left: 20px;
+    margin-right: 20px;
+}

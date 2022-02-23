@@ -1,14 +1,52 @@
-<p>{{pcont}}</p>
+<!--<p class="top">{{pcont}}</p>
 
 <div class="btn-group" role="group" aria-label="Basic example">
     <button type="button" class="btn btn-primary" (click)="counterval()">click me</button>
-    <p>{{count}}</p>
-     </div><br><br>
+   
+     </div><br>
+     <label>Count:</label>
+    <p class="cnt">{{count}}</p><br><br>
 
 <div class="btn-group" role="group" aria-label="Basic example">
     <button type="button" class="btn btn-primary" (click)="fillname()">Fill Name</button>
-     </div>
+     </div><br>
      <label>FirstName</label>
-     <input type="text" value="{{fname}}"><br>
-     <img [src]="imgUrl">
+     <input type="text" value="{{fname}}"><br><br>
+     <div class="image">
+     <img [src]="imgUrl" ></div>
+     <br>
+     <br>
+
+    <form>
+        <label>FirstName</label>
+         <input type="text"  name="fn"><br>
+         <label>LastName</label>
+         <input type="text" name="ln"><br><br>
+         <button (click)="formfillup()">submit</button>
+     </form>
+
+     <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">FirstName</th>
+            <th scope="col">LastName</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td></td>
+            <td></td>
+            
+          </tr>
+        </tbody>
+      </table>
  
+    <br>
+    <br>-->
+    <h1>CoffeeShop</h1>
+    <app-cofeeheadder></app-cofeeheadder>
+    <app-cofeecrousal></app-cofeecrousal>
+    <app-cofeefooter></app-cofeefooter>
