@@ -1,0 +1,14 @@
+.product-desc{
+    margin-left: 400px;
+    margin-top: 40px;
+    border: 2px solid #000000;
+    margin-right: 400px;
+    background-color: palevioletred;
+    margin-bottom: 10px;
+}
+h1{
+    text-align: center;
+}
+p{
+    text-align: center;  
+}

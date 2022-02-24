@@ -45,8 +45,51 @@
       </table>
  
     <br>
-    <br>-->
+    <br>
     <h1>CoffeeShop</h1>
     <app-cofeeheadder></app-cofeeheadder>
     <app-cofeecrousal></app-cofeecrousal>
-    <app-cofeefooter></app-cofeefooter>
+    <app-cofeefooter></app-cofeefooter> 
+
+    <div class="counter">FirstName :
+      <input id="fn" name="FirstName" [(ngModel)]="firstname">
+      <p id="fname">FirstName : {{firstname}}</p>
+    </div>
+
+    <div *ngIf="able"  class="element">
+      <p>some element</p>
+    
+    </div>
+    <div class="even">
+        Enter number:
+    <input name="getnumber" [(ngModel)]="gnumber" class="number">
+    <div *ngIf="evenodd()" class="even">
+      <p class="ans"> Entered Number is even</p>
+    </div>
+  </div> 
+    <div class="container">
+      <div *ngFor="let numArray of numArrays">
+      {{numArray}}
+      </div>
+      <div *ngFor="let StrArray of StrArrays">
+        {{StrArray}}
+      </div>
+    </div>
+
+    <div *ngFor="let StringArray of StringArrays">    
+    <div *ngIf="StringArray.length>5">
+        {{StringArray}}
+    </div>
+  </div><br>
+    odd location String:
+  <div *ngFor="let stringArray of stringArrays; index as i">
+        
+    <div *ngIf="i%2 != 0">
+        {{stringArray}}
+    </div>
+  </div>-->
+   
+<!-- <app-header [itemreceived]=item></app-header>
+ <app-header [arrayrecieves]="NumArrays"></app-header> -->
+ <app-header></app-header>
+ 

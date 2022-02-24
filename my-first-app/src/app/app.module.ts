@@ -11,6 +11,9 @@ import { CofeeheadderComponent } from './cofeeheadder/cofeeheadder.component';
 import { CofeefooterComponent } from './cofeefooter/cofeefooter.component';
 import { CofeelogoComponent } from './cofeelogo/cofeelogo.component';
 import { CofeecrousalComponent } from './cofeecrousal/cofeecrousal.component';
+import { TimerComponent } from './timer/timer.component';
+import { ProductComponent } from './product/product.component';
+import { DescriptionComponent } from './description/description.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { CofeecrousalComponent } from './cofeecrousal/cofeecrousal.component';
     CofeeheadderComponent,
     CofeefooterComponent,
     CofeelogoComponent,
-    CofeecrousalComponent
+    CofeecrousalComponent,
+    TimerComponent,
+    ProductComponent,
+    DescriptionComponent
   ],
   imports: [
     BrowserModule,

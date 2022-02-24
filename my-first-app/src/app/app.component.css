@@ -24,3 +24,50 @@ h1{
     margin-left: 20px;
     margin-right: 20px;
 }
+p{
+    font-size: large;
+   margin-top: 30px;
+  
+}
+
+.counter{
+    margin-left: 400px;
+    margin-top: 40px;
+}
+.element{
+    margin-left: 400px;
+}
+.number{
+    margin-left: 10px;
+}
+.even{
+    margin-left: 400px;
+    background-color: palevioletred;
+    border: 2px solid black;
+}
+.container{
+    margin-left: 400px;
+}
+.counter{
+   margin-right: 500px;
+    border:  2px solid black;
+    background-color: palevioletred;
+    padding-left: 40px;
+    padding-top: 10px;
+}
+#fn{
+    padding-left: 30px;
+}
+.element{
+    margin-right: 500px;
+    margin-top: 20px;
+    border:  2px solid black;
+    background-color: palevioletred;
+    padding-left: 100px;
+    margin-bottom: 30px;
+   
+}
+.ans{
+    margin-left: -400px;
+    padding-left:-30px;
+}

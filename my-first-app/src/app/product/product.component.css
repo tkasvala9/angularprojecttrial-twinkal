@@ -1,0 +1,18 @@
+.product{
+    margin-left: 300px;
+    border: 2px solid black;
+    margin-right: 300px;
+    padding-left: 150px;
+    padding-top: 20px;
+}
+.product-button{
+    border:  2px solid black;
+    margin-top: 10px;
+    margin-right: 50px;
+    
+}
+.product-button1{
+    border:  2px solid black;
+    margin-top: 10px;
+    margin-right: 50px;
+}
