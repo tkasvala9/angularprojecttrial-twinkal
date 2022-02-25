@@ -1,4 +1,4 @@
-<div class="all-product">
+<!-- <div class="all-product">
     <div class="product">
 
         <div class="product_image"><img src=".././assets/image/watch.jpg" height="300px" width="300px"></div>
@@ -11,4 +11,24 @@
         </div>
     </div>
 
-<app-description *ngIf="desc"></app-description>
+<app-description *ngIf="desc"></app-description> -->
+<!-- <div class="addtocart">
+    cart:{{cart}}
+    
+</div> -->
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm" *ngFor="let product of products">
+        <h2>{{product.id}}</h2>
+        <img src=".././assets/image/rice.jpg" height="200px" width="200px">
+        <h6>productname: {{product.productname}}</h6>
+        <h6>location:{{product.location}}</h6>
+        <h6>AvailableQuntity:{{product.quntityavailable}}</h6>
+        <h6>present Stock:{{product.presentstock}}</h6>
+        <h6>price:{{product.price}}</h6>
+        
+        <button type="button" class="btn btn-success" (click)="addtocart(product)">Add to cart</button><br>
+      </div>
+      </div>
+      </div>

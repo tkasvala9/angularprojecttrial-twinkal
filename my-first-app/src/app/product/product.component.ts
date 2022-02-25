@@ -11,10 +11,58 @@ export class ProductComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  @Output() newItemEvent=new EventEmitter();
+  // @Output() newItemEvent=new EventEmitter();
+  // @Input() cart=1;
+
+  @Output() descriptionofproduct=new EventEmitter<any>();
+
+  products=[
+    {
+      "id":1,
+      "productname":"rice",
+      "price":400,
+      "quntityavailable":5,
+      "location":"rajkot",
+      "presentstock":40
+      },
+      
+    {
+      "id":2,
+      "productname":"moong",
+      "price":300,
+      "quntityavailable":4,
+      "location":"rajkot",
+      "presentstock":50
+      },
+      
+    {
+      "id":3,
+      "productname":"chana",
+      "price":400,
+      "quntityavailable":7,
+      "location":"surat",
+      "presentstock":50
+    },
+    {
+      "id":4,
+      "productname":"rajma",
+      "price":300,
+      "quntityavailable":9,
+      "location":"junagadh",
+      "presentstock":30
+    },
+    {
+      "id":5,
+      "productname":"choli",
+      "price":100,
+      "quntityavailable":8,
+      "location":"surendranagar",
+      "presentstock":50
+    }  
+  ]
 
 addnewItem(){
-  this.newItemEvent.emit();
+  // this.newItemEvent.emit();
 }
 
   desc=true;
@@ -27,5 +75,8 @@ addnewItem(){
   }
      
 }
+addtocart(productdata:any){
+  this.descriptionofproduct.emit(productdata);
+} 
 
 }

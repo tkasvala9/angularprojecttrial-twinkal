@@ -45,9 +45,9 @@ p{
     background-color: palevioletred;
     border: 2px solid black;
 }
-.container{
+/* .container{
     margin-left: 400px;
-}
+} */
 .counter{
    margin-right: 500px;
     border:  2px solid black;
@@ -70,4 +70,24 @@ p{
 .ans{
     margin-left: -400px;
     padding-left:-30px;
+}
+.red{
+    color: red;
+}
+.yellow{
+    color: yellow;
+}
+table,tr,td{
+    border: 2px solid black;
+    text-align: center;
+    margin-right: 60px;
+}
+.green{
+    background-color: teal;
+}
+.pink{
+    background-color: palevioletred;
+}
+.heading{
+    background-color: blueviolet;
 }

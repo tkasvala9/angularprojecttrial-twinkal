@@ -1,5 +1,5 @@
 import { outputAst } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input} from '@angular/core';
 
 @Component({
   selector: 'app-timer',
@@ -12,4 +12,5 @@ export class TimerComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  @Input() cart=1;
 }

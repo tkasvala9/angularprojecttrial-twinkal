@@ -90,6 +90,115 @@
   </div>-->
    
 <!-- <app-header [itemreceived]=item></app-header>
- <app-header [arrayrecieves]="NumArrays"></app-header> -->
- <app-header></app-header>
+ <app-header [arrayrecieves]="NumArrays"></app-header> 
+ <app-header></app-header>-->
  
+
+ <!-- <div  class="container">
+   <p [ngClass]="item1 >10 ? 'red': 'yellow'">{{item1}}</p>
+   <p [ngClass]="classfeature()">{{item1}}</p>   
+ </div>
+
+ <div *ngFor="let NumberArray of NumberArrays">
+  <div  class="container">
+    <p [ngClass]="NumberArray%2==0 ? 'red': 'yellow'">{{NumberArray}}</p>
+    </div>
+ </div>
+
+ <div class="container">
+    <button type="button" class="btn btn-danger" (click)="disable()">disable</button>
+    <button type="button" class="btn btn-success" (click)="enable()">enable</button>
+    {{str}}
+</div>
+
+<div class="container"><br><br>
+  <button [ngStyle]="{background: 'pink'}">cilck</button>
+  <button [ngStyle]="appendstyle">click</button><br><br>
+  <table>
+    <tr  class="heading">
+      <td>Id</td>
+      <td>Name</td>
+      <td>UserName</td>
+      <td>Email</td>
+      <td>Adress</td>
+      <td>Phone</td>
+      <td>Website</td>
+      <td>Company</td>
+      <td>DELETE</td>
+    </tr>
+  <tr *ngFor="let employee of employees" [ngClass]="employee.id%2==0 ? 'green': 'pink'">
+    <td>{{employee.id}}</td>
+    <td>{{employee.name}}</td>
+    <td>{{employee.username}}</td>
+    <td>{{employee.email}}</td>
+
+    <td >{{employee.address.city}}</td>
+    <td>{{employee.phone}}</td>
+    <td>{{employee.website}}</td>
+    <td>{{employee.company.name}}</td>
+    <td><button  [ngClass]="employee.id%2==0 ? 'green': 'pink'" (click)="deleteddata(employee)">delete</button></td>
+  </tr>
+</table>
+</div> -->
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-sm">
+     
+      <img src=".././assets/image/rice.jpg" height="200px" width="200px">
+      <button type="button" class="btn btn-success" (click)="addtocart()">Add to cart</button><br>
+      <button type="button" class="btn btn-success" (click)="desciption()"    >description of product</button>
+    </div>
+    <div class="col-sm">
+      <img src=".././assets/image/moong.jpg" height="200px" width="200px">
+      <button type="button" class="btn btn-success" (click)="addtocart()">Add to cart</button><br>
+      <button type="button" class="btn btn-success" (click)="desciption()"   >description of product</button>
+
+    </div>
+    <div class="col-sm">
+      <img src=".././assets/image/chana.jpg" height="200px" width="200px">
+      <button type="button" class="btn btn-success" (click)="addtocart()">Add to cart</button><br>
+      <button type="button" class="btn btn-success" (click)="desciption()"   >description of product</button>
+    </div>
+    <div class="col-sm">
+      <img src=".././assets/image/rajma.jpg" height="200px" width="200px">
+      <button type="button" class="btn btn-success" (click)="addtocart()">Add to cart</button><br>
+      <button type="button" class="btn btn-success" (click)="desciption()"  >description of product</button>
+    </div>
+    <div class="col-sm">
+      <img src=".././assets/image/choli.jpg" height="200px" width="200px">
+      <button type="button" class="btn btn-success" (click)="addtocart()"> Add to cart</button><br>
+      <button type="button" class="btn btn-success" (click)="desciption()"  >description of product</button>
+    
+    </div>
+  </div>
+</div>
+<app-product [cart]=count1></app-product>
+ -->
+ <h1>Items in Cart:{{c}}</h1>
+ <table class="table">
+  <thead>
+    <tr >
+      <th scope="col">id</th>
+      <th scope="col">productname</th>
+      <th scope="col">price</th>
+      <th scope="col">quntity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cartItem of cartItems">
+      <th scope="row">{{cartItem.id}}</th>
+      <td>{{cartItem.productname}}</td>
+      <td>{{cartItem.price}}</td>
+      <td>{{cartItem.quntityavailable}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Total</th>
+      <td>{{totalq}}</td>
+      <td>{{bill}}</td>
+    </tr>
+   
+  </tbody>
+</table>
+<app-product (descriptionofproduct)="additemtocart($event)"></app-product>
