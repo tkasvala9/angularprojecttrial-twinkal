@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class UserinfoService {
 
   constructor() { }
+  counter = 0;
   userDatas=[
     {
       "id": 1,
@@ -238,4 +239,16 @@ export class UserinfoService {
       }
     }
   ];
+
+
+  users={
+    "firstname":'',
+  "lastname":'',
+  "phone":'',
+  "email":''
+  };
+  sendData(users:any){
+    this.users=users;
+    console.log(this.users);
+  }
 }

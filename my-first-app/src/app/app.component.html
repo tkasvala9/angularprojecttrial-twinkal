@@ -1,2 +1,70 @@
-<p>{{this.getdate}}</p>
-<p>{{this.array}}</p>
+<!-- <p>{{this.getdate}}</p>
+<p>{{this.array}}</p> -->
+
+<!-- <button (click)="incrementCounter()">Click Me to increase service counter</button>
+
+<h1>{{us.counter}}</h1>
+<table class="table">
+  <thead>
+    <tr>
+     
+      <th scope="col">id</th>
+      <th scope="col">name</th>
+      <th scope="col">username</th>
+      <th scope="col">email</th>
+      <th scope="col">address</th>
+      <th scope="col">phone</th>
+      <th scope="col">company</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of us.userDatas">
+      
+      <td>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.address.city}}</td>
+      <td>{{user.phone}}</td>
+      <td>{{user.company.name}}</td>
+      
+    </tr>
+    
+ -->
+
+
+    <form #myForm="ngForm" (ngSubmit)="onsubmitofform(myForm.value)">
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="First name" [ngModel]="users.firstname" name="firstname" required>
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Last name" [ngModel]="users.lastname" name="lastname" required>
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="phone" [ngModel]="users.phone" name="phone" required>
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="email" [ngModel]="users.email" name="email" required>
+        </div>
+      </div>
+      <button type="submit">submit</button>
+    </form>
+    <app-timer></app-timer>
+
+   
+    
+    <!-- <app-header></app-header> -->
+
+    <!-- <input type="text" id="number" [(ngModel)]="number">
+
+<button type="button" (click)="printTable()">Submit</button>
+
+
+
+<h3 *ngFor="let result of table, let i=index">
+
+  {{number}} * {{i+1}} = {{result}};
+
+</h3> -->

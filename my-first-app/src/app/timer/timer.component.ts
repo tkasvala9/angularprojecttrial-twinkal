@@ -1,6 +1,7 @@
 import { outputAst } from '@angular/compiler';
 import { Component, OnInit ,Input} from '@angular/core';
 import { DatetimeService } from '..//datetime.service';
+import { UserinfoService } from '../userinfo.service';
 
 @Component({
   selector: 'app-timer',
@@ -9,7 +10,7 @@ import { DatetimeService } from '..//datetime.service';
 })
 export class TimerComponent implements OnInit {
 
-  constructor(public dt:DatetimeService){ }
+  constructor(public dt:DatetimeService,public us:UserinfoService){ }
   
  
 
