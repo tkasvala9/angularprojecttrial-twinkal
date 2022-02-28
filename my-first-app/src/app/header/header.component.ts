@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { DatetimeService } from '../datetime.service';
 
 @Component({
   selector: 'app-header',
@@ -7,20 +8,14 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  
+  constructor(public dt:DatetimeService){ }
+  
+  
 
   ngOnInit(): void {
   }
-  @Input() itemreceived='';
-  itemsent="vollyball";
-  item1="robot";
-  @Input() arrayrecieves:any
-
-  counters=["0"];
-  count:any=0;
-  incrementcounter(){
-    this.counters.push();
-    this.count++
-  }
+  
+  
   
 }

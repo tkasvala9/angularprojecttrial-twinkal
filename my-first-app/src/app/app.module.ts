@@ -14,6 +14,10 @@ import { CofeecrousalComponent } from './cofeecrousal/cofeecrousal.component';
 import { TimerComponent } from './timer/timer.component';
 import { ProductComponent } from './product/product.component';
 import { DescriptionComponent } from './description/description.component';
+import {DatetimeService}from './datetime.service';
+import { UserinfoService } from './userinfo.service';
+
+
 
 @NgModule({
   declarations: [
@@ -28,13 +32,14 @@ import { DescriptionComponent } from './description/description.component';
     TimerComponent,
     ProductComponent,
     DescriptionComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [DatetimeService,UserinfoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
