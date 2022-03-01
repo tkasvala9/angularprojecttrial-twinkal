@@ -1,0 +1,47 @@
+<h1>Form-Validation</h1>
+<div class="container">
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+    
+        <label>
+            firstname:
+            <input formControlName="firstname" placeholder="enter firstname">
+        </label><br><br>
+        <label>
+            lastname:
+            <input formControlName="lastname" placeholder="enter lastname">
+        </label><br><br>
+        <label>
+            age:
+           <input formControlName="age" placeholder="enter age">
+        </label><br><br>
+        <label>
+            MobileNumber:
+            <input formControlName="MobileNumber" placeholder="enter MobileNumber">
+        </label><br><br>
+        <label>
+            adress:
+            <input formControlName="adress" placeholder="enter adress">
+        </label><br><br>
+            <label>
+                City:
+                <input formControlName="city" placeholder="enter city">
+            </label><br><br>
+            <label>
+            email:
+            <input formControlName="email" placeholder="enter email">
+        </label><br><br>
+        <label> 
+            password:
+            <input formControlName="password" placeholder="enter password">
+        </label><br><br>
+        <label> 
+            from:
+            <input formControlName="from" placeholder="enter date" type="date">
+        </label><br><br>
+        <label> 
+            to:
+            <input formControlName="to" placeholder="enter date" type="date">
+        </label><br><br>
+   <br>
+    <button [disabled]="myForm.invalid">submit</button>
+</form> </div>

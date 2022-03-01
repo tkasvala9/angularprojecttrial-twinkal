@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,8 @@ import { ProductComponent } from './product/product.component';
 import { DescriptionComponent } from './description/description.component';
 import {DatetimeService}from './datetime.service';
 import { UserinfoService } from './userinfo.service';
+import { ReactformComponent } from './reactform/reactform.component';
+import { ReactiveAdressFormmComponent } from './reactive-adress-formm/reactive-adress-formm.component';
 
 
 
@@ -31,13 +34,16 @@ import { UserinfoService } from './userinfo.service';
     CofeecrousalComponent,
     TimerComponent,
     ProductComponent,
-    DescriptionComponent
+    DescriptionComponent,
+    ReactformComponent,
+    ReactiveAdressFormmComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [DatetimeService,UserinfoService],
   bootstrap: [AppComponent]

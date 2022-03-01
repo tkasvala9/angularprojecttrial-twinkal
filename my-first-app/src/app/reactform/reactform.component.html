@@ -1,0 +1,14 @@
+<p>reactform works!</p>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+    <div class="container">
+        <label>
+            name:
+            <input formControlName="name" placeholder="enter name">
+        </label>
+        <label>
+            email:
+            <input formControlName="email" placeholder="enter email">
+        </label>
+    </div>
+    <button>submit</button>
+</form>
