@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { fakeAsync } from '@angular/core/testing';
-import { DatetimeService } from './datetime.service';
-import { UserinfoService } from './userinfo.service';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { HttpDataRequestService } from './http-data-request.service';
 
 @Component({
   selector: 'app-root',
@@ -11,49 +12,25 @@ import { UserinfoService } from './userinfo.service';
 })
 export class AppComponent {
   title = 'my-first-app';
-  getdate: any;
-  array: any;
+  constructor(public ht: HttpDataRequestService) { }
+  
 
-  constructor(public dt: DatetimeService, public us: UserinfoService) {
-    this.getdate = this.dt.today;
-    this.array = this.dt.numarray;
+  ngOnInit() {
+    this.ht.getdata().subscribe((data)=>this.show(data));
+    
+  }
+  hdata:any;
+  show(data: any) {
+    return this.hdata=data;
   }
 
-
-  incrementCounter() {
-    this.us.counter++;
+  id='';
+  likes="";
+ body="";
+  getData(id:any) {
+    console.log(id);
+    this.likes=this.hdata[id-1].likes;
+    this.body=this.hdata[id-1].body;
   }
-
-  users = {
-    "firstname": '',
-    "lastname": '',
-    "phone": '',
-    "email": ''
-  }
-  onsubmitofform(users: any) {
-    this.users = users;
-    // this.us.sendData(this.users);
-    this.us.users = users;
-    console.log(this.us.users);
-  }
-
-  table: any = [];
-
-  number = '';
-
-  printTable() {
-
-    console.log(this.number);
-
-
-
-    for (let i = 1; i <= 10; i++) {
-
-      this.table.push(i * Number(this.number));
-
-    }
-
-
-
-  }
+  
 }

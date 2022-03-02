@@ -8,7 +8,8 @@ import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
 export class ReactiveAdressFormmComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
   myForm: any;
-  ngOnInit(): void {
+  ngOnInit(): void {  }
+}
     // this.myForm = this.fb.group({
     //   firstname: ['', Validators.required],
     //   lastname: ['', Validators.required],
@@ -21,7 +22,7 @@ export class ReactiveAdressFormmComponent implements OnInit {
     //   from: ['', Validators.required],
     //   to: ['', Validators.required]
     // });
-  }
+
 
 
 
@@ -42,4 +43,4 @@ export class ReactiveAdressFormmComponent implements OnInit {
   //   let price = 1000;
   //   console.log("Total amount for booking is " + (price) * days + " for " + days + " days.");
   // }
-}
+
